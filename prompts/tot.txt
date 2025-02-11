@@ -1,0 +1,78 @@
+You are a software engineer working on developing {system_description}. Your task is to think aloud and generate a detailed thought process to guide you through creating use case models for this system. This should involve a step-by-step reasoning approach where you explain your thought process as you go.
+
+Instructions:  
+1. Step 1: Identify Goals  
+   - First, think about and list all the potential goals the system should accomplish.  
+   - For each goal, ask yourself: "What does this goal involve?" and generate a use case for each goal.
+
+2. Step 2: Define Actors  
+   - Next, think about who interacts with the system.  
+   - Ask yourself: "Who will initiate each use case?" and list the primary actor.  
+   - Then, consider who else may interact with the system during each process and list these secondary actors.
+
+3. Step 3: Structure the Use Case  
+   - For each use case, think through the preconditions: What needs to be true or available before the use case can start?  
+   - Then, think about the postconditions: What should happen after the use case completes? What is the expected outcome?
+
+4. Step 4: Construct Main Success Scenario (Basic Flow)  
+   - Now, walk through the main success path for each use case.  
+   - Describe, in step-by-step detail, how the actor interacts with the system. Use active voice and keep the flow simple and clear.
+
+5. Step 5: Handle Alternative & Exception Flows  
+   - While walking through the main flow, ask yourself: "What could go differently?"  
+   - Identify any alternative flows where the process might change or differ from the basic flow.  
+   - Also, think of possible exception flows: What errors might happen, and how will the system respond?
+
+6. Step 6: Identify Relationships Between Use Cases  
+   - Think about how your use cases relate to one another.  
+   - For mandatory steps that must always happen, think of INCLUDE relationships.  
+   - For optional steps that could extend the use case, identify EXTEND relationships.
+
+---  
+
+Example: Airline Ticketing System  
+
+Step 1: Identify Goals  
+- Book Flight Ticket  
+- Search for Available Flights  
+- Cancel Flight Ticket  
+- Modify Booking Details  
+
+Step 2: Define Actors  
+Primary Actor: Clerk  
+Secondary Actors: Payment System, Flight Database  
+
+Step 3: Structure the Use Case  
+Use Case: Book Flight Ticket  
+Preconditions:  
+- The Clerk is logged into the system.  
+- Customer details are available in the system.  
+
+Postconditions:  
+- The ticket is successfully booked.  
+- The payment has been processed.
+
+Step 4: Main Success Scenario (Basic Flow)  
+1. The Clerk chooses the "Book Ticket" option.  
+2. The Clerk enters passenger and travel details.  
+3. The system displays a list of available flights.  
+4. The Clerk selects a flight.  
+5. The system calculates the ticket price.  
+6. The Clerk confirms the booking.  
+7. The system requests payment authorization from the payment system.  
+8. Payment is successful.  
+9. The system generates the electronic ticket.
+
+Step 5: Alternative & Exception Flows  
+- (A1) Multi-City Booking: The Clerk inputs multiple destinations, and the system finds multi-leg flights.  
+- (A2) Payment Declined: The system informs the Clerk, and they are prompted to reattempt the payment.  
+- (E1) No Flights Available: The system alerts the Clerk and provides alternative options.
+
+Step 6: Identify Relationships  
+- Includes: "Verify Customer Details" (Step 2)  
+- Extends: "Apply Promotional Discount" (optional in Step 5)  
+
+---  
+
+Your Task:  
+As a software engineer, think aloud through the process and generate all relevant use cases for the {system_description} using the step-by-step reasoning approach outlined above. 

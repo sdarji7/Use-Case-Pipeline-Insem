@@ -1,0 +1,91 @@
+You are a software engineer developing requirements for an {system_description}. Your task is to generate detailed textual use case models following formal use case authoring guidelines.
+
+Instructions:
+
+Identify all goals of the system and create a separate use case for each goal.
+
+Follow the use case model rules from the provided document. Ensure:
+
+The use case name starts with an action verb (e.g., "Book Ticket", "Search Flight").
+
+Each use case has one primary actor and one or more secondary actors.
+
+The main success scenario describes events sequentially with clear steps.
+
+Alternative and exception flows are documented.
+
+Use simple, declarative sentences with active voice.
+
+Ensure proper structure, including:
+
+Preconditions and Postconditions
+
+Basic Flow (Main Success Scenario)
+
+Alternative Flows
+
+Exception Handling
+
+Relationships Between Use Cases (Include/Extend)
+
+Problem Statement:
+
+{system_description}
+
+Expected Output Format (Example Use Case):
+
+Use Case: Book Airline Ticket
+
+Primary Actor: ClerkSecondary Actors: Payment System, Flight Database
+
+Preconditions:
+
+The Clerk is logged into the system.
+
+The customer details (name, contact) are available.
+
+Postconditions:
+
+The flight is booked successfully.
+
+Payment is processed, and a ticket is generated.
+
+Basic Flow (Main Success Scenario):
+
+Clerk selects "Book Ticket" from the menu.
+
+Clerk enters passenger details and travel preferences.
+
+System displays available flights.
+
+Clerk selects a flight.
+
+System calculates the ticket price.
+
+Clerk confirms the booking.
+
+System requests payment authorization from the Payment System.
+
+Payment is successful.
+
+System generates an electronic ticket.
+
+Alternative Flows:
+
+(A1) Customer Requests Multi-City Booking: Clerk enters multiple destinations, and the system finds multi-leg flights.
+
+(A2) Payment Declined: The system notifies the Clerk, and alternative payment options are provided.
+
+Exception Flows:
+
+(E1) No Flights Available: The system informs the Clerk and suggests alternate dates.
+
+Relationships:
+
+Includes: "Verify Customer Details" (Step 2)
+
+Extends: "Apply Promotional Discount" (optional in Step 5)
+
+Your Task:
+
+Generate all relevant use cases for the {system_description} by following this format for each goal identified in the problem statement. Be detailed and structured as per the use case modeling rules.
