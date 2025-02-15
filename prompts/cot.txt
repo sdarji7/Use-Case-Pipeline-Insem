@@ -1,76 +1,57 @@
-You are a software engineer developing requirements for an {system_description}. Your task is to generate detailed textual use case models following formal use case authoring guidelines using a step-by-step reasoning approach.  
+Given the following system description: {system_description}, generate a comprehensive set of user stories that capture the functional and non-functional requirements from the perspective of all primary and secondary actors.
 
-Instructions:  
-1. Step 1: Identify Goals  
-   - List all possible goals the system should achieve.  
-   - Define a use case for each goal.  
+Step-by-Step Reasoning Before Generating User Stories
 
-2. Step 2: Define Actors  
-   - Identify the primary actor who initiates the use case.  
-   - List secondary actors interacting with the system.  
+1. Identify Actors:  
+   - Determine all primary actors (direct users of the system).  
+   - Identify all secondary actors (external systems, APIs, or background processes).  
 
-3. Step 3: Structure the Use Case  
-   - Preconditions: Define necessary conditions before execution.  
-   - Postconditions: Define expected outcomes after execution.  
+2. Understand User Goals & Interactions:  
+   - Define the key tasks that each actor needs to perform.  
+   - Consider both functional (feature-related) and non-functional (performance, security, usability) goals.  
 
-4. Step 4: Construct Main Success Scenario (Basic Flow)  
-   - Detail step-by-step interactions between the actor and system.  
-   - Maintain clarity using active voice and simple declarative sentences.  
+3. Break Down the System's Functionalities:  
+   - Map out user flows and identify critical interactions.  
+   - Ensure coverage of typical use cases, error handling, and security constraints.  
 
-5. Step 5: Handle Alternative & Exception Flows  
-   - Consider alternative flows that deviate from the main success path.  
-   - Identify exception flows where errors may occur.  
+4. Generate User Stories Using the "Front of the Card" Format:  
+   - Title: A concise name summarizing the user story.  
+   - As a [Primary or Secondary Actor],  
+   - I want to [Desired Action],  
+   - So that [Benefit or Outcome].  
 
-6. Step 6: Identify Relationships Between Use Cases  
-   - Use INCLUDE for mandatory dependencies.  
-   - Use EXTEND for optional extensions.  
+5. Define "Back of the Card" Details (Success & Failure Scenarios):
 
----
+   Success Scenarios (Acceptance Criteria):
 
-Example: Airline Ticketing System  
+      - Specify the expected behavior when the user story executes correctly.
 
-Step 1: Identify Goals  
-- Book Flight Ticket  
-- Search for Available Flights  
-- Cancel Flight Ticket  
-- Modify Booking Details  
+      - Define how the system should validate and process the request.
 
-Step 2: Define Actors  
-Primary Actor: Clerk  
-Secondary Actors: Payment System, Flight Database  
+      - Confirm any output/response messages or notifications that the user should receive.
 
-Step 3: Structure the Use Case  
-Use Case: Book Flight Ticket  
-Preconditions:  
-1. Clerk is logged into the system.  
-2. Customer details are available.  
+   Failure Scenarios (Edge Cases & Error Handling):
 
-Postconditions:  
-1. Ticket is booked successfully.  
-2. Payment is processed.  
+      - Consider invalid inputs, insufficient data, or unexpected actions.
 
-Step 4: Main Success Scenario (Basic Flow)  
-1. Clerk selects "Book Ticket" option.  
-2. Clerk enters passenger details and travel preferences.  
-3. System displays available flights.  
-4. Clerk selects a flight.  
-5. System calculates the ticket price.  
-6. Clerk confirms the booking.  
-7. System requests payment authorization from the Payment System.  
-8. Payment is successful.  
-9. System generates an electronic ticket.  
+      - Specify how the system should gracefully handle errors and display appropriate messages.
 
-Step 5: Alternative & Exception Flows  
-- (A1) Multi-City Booking: Clerk enters multiple destinations, and the system finds multi-leg flights.  
-- (A2) Payment Declined: System notifies the Clerk and prompts reattempt.  
-- (E1) No Flights Available: System informs the Clerk and suggests alternate dates.  
+      - Include security concerns like fraud detection, unauthorized access, and system downtime handling. 
 
-Step 6: Identify Relationships  
-- Includes: "Verify Customer Details" (Step 2)  
-- Extends: "Apply Promotional Discount" (optional in Step 5)  
+6. Validate & Iterate:  
+   - Ensure each actor’s perspective is fully captured.  
+   - Verify that both functional and non-functional requirements are covered.  
+   - Address missing dependencies between user stories.  
+
+Ensure That:
+1. Each user story accounts for different actors involved in the system.
+2. Both functional (features, actions) and non-functional (performance, security, accessibility) aspects are covered.
+3. Dependencies between user stories are noted where applicable.
+4. The user stories are written in clear, concise language suitable for Agile development.
+
 
 ---
 
 Your Task:  
-Generate all relevant use cases for the {system_description}, following the structured step-by-step approach above.
+Generate comprehensive set of user stories for the {system_description}, following the structured step-by-step approach above.
 
